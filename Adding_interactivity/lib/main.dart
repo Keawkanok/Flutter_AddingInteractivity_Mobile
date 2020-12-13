@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'favoriteA.dart';
+import 'favoriteB.dart';
+import 'favoriteC.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,7 +10,6 @@ void main() {
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
-
   Widget build(BuildContext context) {
    Widget titleSection = Container(
       padding: const EdgeInsets.all(32),
@@ -39,10 +41,12 @@ class MyApp extends StatelessWidget {
           ),
 
           /*3*/
-          
+          FavoriteA(),
+          ParentManageB(),
+          ParentManageC()
           // Icon(
             // Icons.star,
-            FavoriteWidget(),
+            // FavoriteWidget(),
           //   color: Colors.red[500],
           // ),
           // Text('41'),
@@ -52,7 +56,7 @@ class MyApp extends StatelessWidget {
 
     
     // #enddocregion titleSection
-     Color color = Theme.of(context).primaryColor;
+    Color color = Theme.of(context).primaryColor;
 
     Widget buttonSection = Container(
     child: Row(
@@ -133,7 +137,6 @@ class FavoriteWidget extends StatefulWidget {
   _FavoriteWidgetState createState() => _FavoriteWidgetState();
   
 }
-
 class _FavoriteWidgetState extends State<FavoriteWidget> {
 
   bool _isFavorited = true;
